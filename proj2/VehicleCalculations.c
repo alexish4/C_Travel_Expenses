@@ -36,8 +36,3 @@ int taxiFee(int days, int taxiTotal)//the company's max coverage is 10 dollars p
     }
     return taxiF;
 }
-int numCarRentals(int days)
-{
-    carRental = days * 41; //How much it costs to rent a car per day
-    return carRental;
-}
