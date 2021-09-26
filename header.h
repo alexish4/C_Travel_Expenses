@@ -12,6 +12,7 @@ int days,
     parkingF,
     taxiF,
     parkingTotal, // total amount person spent
+    taxiTotal,
     regisF, // is this a set value???
     hotelF,
     meals;
