@@ -3,14 +3,17 @@
 
 int main()
 {
+    int total;
     printf("Travel Expenses Calculator");
-    daysOnTrip();
-    timeDeparted_Arrive();
-    printf("The total expense for this trip: \n");
+    total = regisFee() + 
+            privCarExpense(milesDriven()) + 
+            parkingFee(daysOnTrip(), parkingTotal) + 
+            taxiFee(daysOnTrip(), taxiTotal) + 
+            hotelFee(daysOnTrip());
+    printf("The total expenses for this trip: $%d\n", total);
     printf("The total allowable expenses for this trip: \n");
     printf("The total amount to be reimbursed: \n");
     printf("Amount saved: \n");
-
     
     return 0;
 }
