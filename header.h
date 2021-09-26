@@ -11,6 +11,7 @@ int days,
     carExpense,
     parkingF,
     taxiF,
+    parkingTotal, // total amount person spent
     regisF, // is this a set value???
     hotelF,
     meals;
@@ -25,7 +26,7 @@ int dinner = 16;
   - only valid times (24 hour time?)*/
 int daysOnTrip(); // asking how many days spent
 int timeDeparted_Arrive(); //departure info for first day and arrival home last day
-int numCarRentals(); // number of cars rented?
+int numCarRentals(int days,int parkingTotal); // number of cars rented?
 int milesDriven(); // if private car used, ask how many miles.
 //is rental == car rental????
 int regisFee();
@@ -33,8 +34,8 @@ int regisFee();
 // calulations
 int roundTripAirfare();
 int privCarExpense(int miles); // Cost is $0.27 per mile
-int parkingFee(int days); // allows $6 per day, anything more must be covered by employee
-int taxiFee(int days); // allows $10 per day
+int parkingFee(int days, int parkingTotal); // allows $6 per day, anything more must be covered by employee
+int taxiFee(int days, int parkingTotal); // allows $10 per day
 int hotelFee(int days); // allows up to $90 per night
 /* FIRST DAY:
    Breakfast allowed if time of departure is before 07:00
