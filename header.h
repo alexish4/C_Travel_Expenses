@@ -35,13 +35,18 @@ double inputValidMoney(double amt)
 
 int regisFee();
 
-// calulations
+// car calulations
 int privCarExpense(int miles); // Cost is $0.27 per mile
 double parkingFees(int days, double parkingTotal); // allows $6 per day, anything more must be covered by employee
 double privCarExpense(int miles);
 double taxiFees(int days, double taxiTotal); // allows $10 per day
+//hotel and meal calculations
 double meetingFees();
-double hotelFees(); // allows up to $90 per night
+double hotelFee(int days, int hotelTotal); // allows up to $90 per night
+int breakfastsEaten(int days, int timeArrivedHome, int timeDeparted);
+int lunchesEaten(int days, int timeArrivedHome, int timeDeparted);
+int dinnersEaten(int days, int timeArrivedHome, int timeDeparted);
+double mealCost(int breakfasts, int lunches, int dinners, double expenditure);
 /* FIRST DAY:
    Breakfast allowed if time of departure is before 07:00
    Lunch is allowed if time of departure is before 12:00
