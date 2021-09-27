@@ -28,8 +28,8 @@ double getParkingFees();
 double getTaxiFees();
 double getMeetingFees();
 double getHotelFees();
-double getMealCostsTotal()
-double inputValidMoney(double amt)
+double getMealCostsTotal();
+double inputValidMoney(double amt);
 
 
 int regisFee();
