@@ -107,17 +107,17 @@ int getMilesDriven() {
 //input for parking fees.
 double getParkingFees() {
     printf("How much was spent on parking fees?\n");
-    scanf("%lf", &parkingF);
+    scanf("%lf", &parkingTotal);
 
-    return inputValidMoney(parkingF);  //same method to check money validity.
+    return inputValidMoney(parkingTotal);  //same method to check money validity.
 }
 
 //input for taxi fees.
 double getTaxiFees() {
     printf("How much was spent on taxi fees?\n");
-    scanf("%lf", &taxiF);
+    scanf("%lf", &taxiTotal);
 
-    return inputValidMoney(taxiF);   //same method.  very similar to parkingFees.
+    return inputValidMoney(taxiTotal);   //same method.  very similar to parkingFees.
 }
 
 //input for conference and registration fees.
