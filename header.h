@@ -2,16 +2,15 @@
 #define HEADER_H
 
 //variables
-double airFare, carRental, parkingF, taxiF, regisF, parkingTotal, hotelF, taxiTotal;
+double airFare, carRental, parkingF, taxiF, regisF, parkingTotal, hotelF, taxiTotal, meals;
 int days, 
     timeDeparted, //24 hr time?
     timeArrivedHome,
     miles, //if private car used
-    carExpense,
-    meals;
-int breakfast = 9;
-int lunch = 12;
-int dinner = 16;
+    breakfast,
+    lunch,
+    dinner,
+    carExpense;
 
 //Geting information from user
 /*NOTE ON INPUT VALIDATION:
@@ -28,16 +27,15 @@ double getParkingFees();
 double getTaxiFees();
 double getMeetingFees();
 double getHotelFees();
-double getMealCostsTotal()
-double inputValidMoney(double amt)
+double getMealCostsTotal();
+double inputValidMoney(double amt);
 
 
 int regisFee();
 
 // car calulations
-int privCarExpense(int miles); // Cost is $0.27 per mile
 double parkingFees(int days, double parkingTotal); // allows $6 per day, anything more must be covered by employee
-double privCarExpense(int miles);
+double privCarExpense(int miles);// Cost is $0.27 per mile
 double taxiFees(int days, double taxiTotal); // allows $10 per day
 //hotel and meal calculations
 double meetingFees();
@@ -58,7 +56,10 @@ double mealCost(int breakfasts, int lunches, int dinners, double expenditure);
 */
 double hotelFees();
 double mealCost(int breakfasts, int lunches, int dinners, double expenditure);
-int mealEaten(int days, int timeArrivedHome, int timeDeparted);
 
+double inputValidMoney(double amt);
+int breakfastsEaten(int days, int timeArrivedHome, int timeDeparted);
+int lunchesEaten(int days, int timeArrivedHome, int timeDeparted);
+int dinnersEaten(int days, int timeArrivedHome, int timeDeparted);
 
 #endif
