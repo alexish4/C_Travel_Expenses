@@ -32,8 +32,8 @@ int main()
             // hotel and meal fees
             hotelFee(days, hotelF)+
             mealCost(breakfast, lunch, dinner, meals);
-    printf("The total expenses for this trip: $%lf\n", total);
-    printf("The total allowable expenses for this trip: \n");
+    //printf("The total expenses covered for this trip: $%lf\n", total);
+    printf("The total allowable expenses for this trip: $%lf\n", total);
     printf("The total amount to be reimbursed: \n");
     printf("Amount saved: \n");
     
