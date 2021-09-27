@@ -58,7 +58,10 @@ double mealCost(int breakfasts, int lunches, int dinners, double expenditure);
 */
 double hotelFees();
 double mealCost(int breakfasts, int lunches, int dinners, double expenditure);
-int mealEaten(int days, int timeArrivedHome, int timeDeparted);
 
+double inputValidMoney(double amt);
+int breakfastsEaten(int days, int timeArrivedHome, int timeDeparted);
+int lunchesEaten(int days, int timeArrivedHome, int timeDeparted);
+int dinnersEaten(int days, int timeArrivedHome, int timeDeparted);
 
 #endif
