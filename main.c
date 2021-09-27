@@ -37,7 +37,6 @@ int main()
                   hotelF +
                   meals;
 
-    double mealAmount = mealCost(breakfast, lunch, dinner, meals);
     allowedTotal = parkingFees(days, parkingTotal) + 
                    taxiFees(days, taxiTotal) +
                    //hotel/meals
