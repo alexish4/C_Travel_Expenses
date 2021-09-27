@@ -2,13 +2,12 @@
 #define HEADER_H
 
 //variables
-double airFare, carRental, parkingF, taxiF, regisF, hotelF;
+double airFare, carRental, parkingF, taxiF, regisF, parkingTotal, hotelF, taxiTotal;
 int days, 
     timeDeparted, //24 hr time?
     timeArrivedHome,
     miles, //if private car used
     carExpense,
-    parkingTotal, // total amount person spent
     taxiTotal,
     meals;
 int breakfast = 9;
@@ -38,8 +37,9 @@ int regisFee();
 
 // calulations
 int privCarExpense(int miles); // Cost is $0.27 per mile
-double parkingFees(); // allows $6 per day, anything more must be covered by employee
-double taxiFees(); // allows $10 per day
+double parkingFees(int days, double parkingTotal); // allows $6 per day, anything more must be covered by employee
+double privCarExpense(int miles);
+double taxiFees(int days, double taxiTotal); // allows $10 per day
 double meetingFees();
 double hotelFees(); // allows up to $90 per night
 /* FIRST DAY:
