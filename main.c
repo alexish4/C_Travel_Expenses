@@ -3,7 +3,7 @@
 
 int main()
 {
-    int total = 0;
+    double total = 0;
     printf("Travel Expenses Calculator");
     days = getDaysOnTrip();
     miles = getMilesDriven();
@@ -16,7 +16,7 @@ int main()
 
     //getParkingFees();
 
-    printf("The total expenses for this trip: $%d\n", total);
+    printf("The total expenses for this trip: $lf\n", total);
     total = parkingFees(days, parkingF) + 
             privCarExpense(miles) + taxiFees(days, taxiF);
     printf("The total allowable expenses for this trip: \n");
