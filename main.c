@@ -50,8 +50,17 @@ int main()
     //double amountSaved = 
     //printf("The total expenses covered for this trip: $%lf\n", total);
     printf("The total amount spent: $%lf\n", personTotal);
-    printf("The total amount to be reimbursed: $%lf\n", allowedTotal);
-    printf("Amount saved: \n");
+    printf("The total amount the company is willing to cover: $%lf\n", allowedTotal);
+    if(personTotal < allowedTotal)
+    {
+        double saved = allowedTotal - personTotal;
+       printf("Amount saved: \n"); 
+    }
+    else
+    {
+        printf("you over spent bud");
+    }
+    
     
     return 0;
 }
