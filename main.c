@@ -4,7 +4,7 @@
 int main()
 {
     double total = 0;
-    printf("Travel Expenses Calculator");
+    printf("Travel Expenses Calculator\n");
     days = getDaysOnTrip();
     timeDeparted = getTimeDeparture();
     timeArrivedHome = getTimeArriveHome();
