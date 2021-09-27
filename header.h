@@ -31,7 +31,7 @@ double inputValidMoney(double amt);
 int regisFee();
 
 // car calulations
-//double parkingFees(int days, double parkingTotal); // allows $6 per day, anything more must be covered by employee
+double parkingFees(int days, double parkingTotal); // allows $6 per day, anything more must be covered by employee
 double privCarExpense(int miles);// Cost is $0.27 per mile
 double taxiFees(int days, double taxiTotal); // allows $10 per day
 //hotel and meal calculations
