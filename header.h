@@ -2,13 +2,12 @@
 #define HEADER_H
 
 //variables
-double airFare, carRental, parkingF, taxiF, regisF, parkingTotal, hotelF, taxiTotal, totalMealCost;
+double airFare, carRental, parkingF, taxiF, regisF, parkingTotal, hotelF, taxiTotal, meal;
 int days, 
     timeDeparted, //24 hr time?
     timeArrivedHome,
     miles, //if private car used
-    carExpense,
-    meals;
+    carExpense;
 
 //Geting information from user
 /*NOTE ON INPUT VALIDATION:
