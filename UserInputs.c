@@ -87,15 +87,14 @@ double getCarRentalCost() {
 //input for miles driven.
 int getMilesDriven() {
     char yesOrNo;
-    printf("did you use a private vehicle?  Enter 'y' for yes and 'n' for no.\n");      //asks the user if they drove a private vehicle.
+    printf("Did you use a private vehicle?  Enter 'y' for yes and 'n' for no.\n");      //asks the user if they drove a private vehicle.
     scanf("%c", &yesOrNo);
 
-    if (yesOrNo != 'y' || yesOrNo != 'n') {
-        while (yesOrNo != 'y' || yesOrNo != 'n') {                                      //checks if the user put something other than 'y' or 'n'.
-            printf("Invalid input.  Please put either 'y' for yes or 'n' for no\n");    //if it is not valid, then will ask to try again.
-            scanf("%c", &yesOrNo);
-        }
-    }else if (yesOrNo == 'y') {
+    while (yesOrNo != 'y' && yesOrNo != 'n') {                                      //checks if the user put something other than 'y' or 'n'.
+        printf("Invalid input.  Please put either 'y' for yes or 'n' for no\n");    //if it is not valid, then will ask to try again.
+        scanf("%c", &yesOrNo);
+    }
+    if (yesOrNo == 'y') {
         printf("How many miles did you drive?  Round to nearest mile.\n");    //if else statement to read if user answered 'y' or 'n'
         scanf("%d", &miles);
     } else {
@@ -108,17 +107,17 @@ int getMilesDriven() {
 //input for parking fees.
 double getParkingFees() {
     printf("How much was spent on parking fees?\n");
-    scanf("%lf", &parkingF);
+    scanf("%lf", &parkingTotal);
 
-    return inputValidMoney(parkingF);  //same method to check money validity.
+    return inputValidMoney(parkingTotal);  //same method to check money validity.
 }
 
 //input for taxi fees.
 double getTaxiFees() {
     printf("How much was spent on taxi fees?\n");
-    scanf("%lf", &taxiF);
+    scanf("%lf", &taxiTotal);
 
-    return inputValidMoney(taxiF);   //same method.  very similar to parkingFees.
+    return inputValidMoney(taxiTotal);   //same method.  very similar to parkingFees.
 }
 
 //input for conference and registration fees.

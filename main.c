@@ -3,23 +3,50 @@
 
 int main()
 {
-<<<<<<< HEAD
-    printf("-------------------Travel Expenses-------------------\n
-            Please enter the number of days you will be traveling");
+    double personTotal = 0;
+    double allowedTotal = 0;
+    printf("Travel Expenses Calculator\n");
+    days = getDaysOnTrip();
+    timeDeparted = getTimeDeparture();
+    timeArrivedHome = getTimeArriveHome();
+    // car fees
+    miles = getMilesDriven();
+    taxiTotal = getTaxiFees();
+    parkingTotal = getParkingFees();
+    carRental = getCarRentalCost();
+    // hotel/ meeting fees
+    airFare = getAirFareCost();
+    regisF = getMeetingFees();
+    hotelF = getHotelFees();
+    // meal fees
+    meals = getMealCostsTotal(); // from user
+    //calculating company coverage
+    breakfast = breakfastsEaten(days, timeArrivedHome, timeDeparted);
+    lunch = lunchesEaten(days, timeArrivedHome, timeDeparted);
+    dinner = dinnersEaten(days, timeArrivedHome, timeDeparted);
 
-=======
-    int total;
-    printf("Travel Expenses Calculator");
-    total = regisFee() + 
-            privCarExpense(milesDriven()) + 
-            parkingFee(daysOnTrip(), parkingTotal) + 
-            taxiFee(daysOnTrip(), taxiTotal) + 
-            hotelFee(daysOnTrip());
-    printf("The total expenses for this trip: $%d\n", total);
-    printf("The total allowable expenses for this trip: \n");
+    //What the business person spent
+                //car fees
+    personTotal = parkingTotal + 
+                  taxiTotal + 
+                  carRental + 
+                  // hotel/meeting fees
+                  airFare +
+                  regisF +
+                  hotelF +
+                  meals;
+
+    double mealAmount = mealCost(breakfast, lunch, dinner, meals);
+    /*
+    if(mealAmount > 0)
+    {
+        total += mealAmount;
+    }*/
+
+    //printf("The total expenses covered for this trip: $%lf\n", total);
+    printf("The total amount spent: $%lf\n", personTotal);
     printf("The total amount to be reimbursed: \n");
     printf("Amount saved: \n");
     
     return 0;
->>>>>>> 00567df6bf3ad7f3868f286d4564949df005d055
 }

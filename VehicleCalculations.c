@@ -16,7 +16,7 @@ double parkingFees(int days, double parkingTotal) //the company's max coverage i
     }
     return parkingF;
 }
-int privCarExpense(int miles)
+double privCarExpense(int miles)
 {
     carExpense = 0.27 * miles;
     return carExpense;
