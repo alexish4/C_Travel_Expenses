@@ -3,11 +3,9 @@
 
 int main()
 {
-<<<<<<< HEAD
     printf("-------------------Travel Expenses-------------------\n
             Please enter the number of days you will be traveling");
 
-=======
     int total;
     printf("Travel Expenses Calculator");
     total = regisFee() + 
@@ -21,5 +19,4 @@ int main()
     printf("Amount saved: \n");
     
     return 0;
->>>>>>> 00567df6bf3ad7f3868f286d4564949df005d055
 }
