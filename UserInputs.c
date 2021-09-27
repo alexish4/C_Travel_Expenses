@@ -87,7 +87,7 @@ double getCarRentalCost() {
 //input for miles driven.
 int getMilesDriven() {
     char yesOrNo;
-    printf("did you use a private vehicle?  Enter 'y' for yes and 'n' for no.\n");      //asks the user if they drove a private vehicle.
+    printf("Did you use a private vehicle?  Enter 'y' for yes and 'n' for no.\n");      //asks the user if they drove a private vehicle.
     scanf("%c", &yesOrNo);
 
     while (yesOrNo != 'y' && yesOrNo != 'n') {                                      //checks if the user put something other than 'y' or 'n'.
