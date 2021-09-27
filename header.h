@@ -7,6 +7,9 @@ int days,
     timeDeparted, //24 hr time?
     timeArrivedHome,
     miles, //if private car used
+    breakfast,
+    lunch,
+    dinner,
     carExpense;
 
 //Geting information from user
