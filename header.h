@@ -12,6 +12,7 @@ int days,
     parkingF,
     taxiF,
     parkingTotal, // total amount person spent
+    taxiTotal,
     regisF, // is this a set value???
     hotelF,
     meals;
@@ -25,17 +26,19 @@ int dinner = 16;
   - no values less than 1 for number of days
   - only valid times (24 hour time?)*/
 int daysOnTrip(); // asking how many days spent
-int timeDeparted_Arrive(); //departure info for first day and arrival home last day
-
+int timeDeparture(); //departure info for first day and arrival home last day
+int timeArriveHome();
 int milesDriven(); // if private car used, ask how many miles.
-//is rental == car rental????
+double airFareCost();
+double carRentalCost();
 int regisFee();
 
 // calulations
 int privCarExpense(int miles); // Cost is $0.27 per mile
-int parkingFee(int days, int parkingTotal); // allows $6 per day, anything more must be covered by employee
-int taxiFee(int days, int taxiTotal); // allows $10 per day
-int hotelFee(int days); // allows up to $90 per night
+double parkingFees(); // allows $6 per day, anything more must be covered by employee
+double taxiFees(); // allows $10 per day
+double meetingFees();
+double hotelFees(); // allows up to $90 per night
 /* FIRST DAY:
    Breakfast allowed if time of departure is before 07:00
    Lunch is allowed if time of departure is before 12:00
@@ -46,6 +49,9 @@ int hotelFee(int days); // allows up to $90 per night
    Lunch is allowed if the time of arrival is after 13:00 
    Dinner is allowed on the last day if the time of arrival is after 19:00
 */
+double hotelFees();
+double mealCost(int breakfasts, int lunches, int dinners, double expenditure);
+double inputValidMoney(double amt);
 int mealEaten(int days, int timeArrivedHome, int timeDeparted);
 
 
