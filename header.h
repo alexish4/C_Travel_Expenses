@@ -8,7 +8,6 @@ int days,
     timeArrivedHome,
     miles, //if private car used
     carExpense,
-    taxiTotal,
     meals;
 int breakfast = 9;
 int lunch = 12;
