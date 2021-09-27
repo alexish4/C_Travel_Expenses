@@ -2,7 +2,13 @@
 #include <stdlib.h>
 #include "header.h"
 
-double hotelFee(int days, int hotelTotal) // allows up to $90 per night
+double hotelAllowance(int days) // allows up to $90 per night
+{   
+    // days = getDaysOnTrip();
+    return days * 90;   // How much the company is willing to pay for hotels
+}
+
+double hotelFee(int days, int hotelTotal) 
 {
     double userPay = 0.00;
     
@@ -11,7 +17,7 @@ double hotelFee(int days, int hotelTotal) // allows up to $90 per night
     // In main, can use an if statement like if hotelFee() < 0,
     // print("You were under allowed expenses and saved $%d", hotelFee() * -1)
 
-    return userPay;
+    return userPay; // How much the businessperson must pay from excess(+), or how much they saved(-)
 }
 
 int breakfastsEaten(int days, int timeArrivedHome, int timeDeparted)
@@ -59,18 +65,26 @@ int dinnersEaten(int days, int timeArrivedHome, int timeDeparted)
     return dinner;
 }
 
-double mealCost(int breakfasts, int lunches, int dinners, double expenditure)
+double mealAllowance(int breakfasts, int lunches, int dinners)
 {
-    double userPay = 0.00, allowedPay = 0.00;
+    double allowedPay = 0.00;
 
     allowedPay += breakfasts * 9.00;
     allowedPay += lunches * 12.00;
     allowedPay += dinners * 16.00;
 
-    userPay = expenditure - allowedPay;
+    return allowedPay; // How much the company is willing to spend on meals
+}
+
+double mealCost(double allowance, double expenditure)
+{
+    double userPay = 0.00;
+
+    // allowance is mealAllowance(), expenditure is getMealCostsTotal()
+    userPay = expenditure - allowance;
     // If negative, means money was saved.
     // In main, can use an if statement like if mealCost() < 0,
     // print("You were under allowed expenses and saved $%d", mealCost() * -1)
 
-    return userPay;
+    return userPay; // How much the businessperson must pay from excess(+), or how much they saved(-)
 }
