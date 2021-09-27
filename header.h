@@ -50,7 +50,7 @@ double hotelFees(); // allows up to $90 per night
    Dinner is allowed on the last day if the time of arrival is after 19:00
 */
 double hotelFees();
-double mealCosts();
+double mealCost(int breakfasts, int lunches, int dinners, double expenditure);
 double inputValidMoney(double amt);
 int mealEaten(int days, int timeArrivedHome, int timeDeparted);
 
