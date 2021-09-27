@@ -53,14 +53,13 @@ int main()
     printf("The total amount the company is willing to cover: $%.2lf\n", allowedTotal);
     if(personTotal < allowedTotal)
     {
-        double saved = allowedTotal - personTotal;
-       printf("Amount saved: \n"); 
+       double saved = allowedTotal - personTotal;
+       printf("Amount saved: %.2lf \n", saved);  
     }
     else
     {
         printf("you over spent bud");
     }
-    
     
     return 0;
 }
