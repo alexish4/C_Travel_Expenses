@@ -2,41 +2,44 @@
 #define HEADER_H
 
 //variables
+double airFare, carRental, parkingF, taxiF, regisF, parkingTotal, hotelF, taxiTotal;
 int days, 
     timeDeparted, //24 hr time?
     timeArrivedHome,
-    airFare, // air fare total
-    carRental, //car rental total
     miles, //if private car used
     carExpense,
-    parkingF,
-    taxiF,
-    parkingTotal, // total amount person spent
     taxiTotal,
-    regisF, // is this a set value???
-    hotelF,
     meals;
 int breakfast = 9;
 int lunch = 12;
 int dinner = 16;
 
-// returning info
+//Geting information from user
 /*NOTE ON INPUT VALIDATION:
   - no neg numbers for dollar amount, or miles driven
   - no values less than 1 for number of days
   - only valid times (24 hour time?)*/
-int daysOnTrip(); // asking how many days spent
-int timeDeparture(); //departure info for first day and arrival home last day
-int timeArriveHome();
-int milesDriven(); // if private car used, ask how many miles.
-double airFareCost();
-double carRentalCost();
+int getDaysOnTrip(); // asking how many days spent
+int getTimeDeparture(); //departure info for first day and arrival home last day
+int getTimeArriveHome();
+double getAirFareCost();
+double getCarRentalCost();
+int getMilesDriven(); // if private car used, ask how many miles.
+double getParkingFees();
+double getTaxiFees();
+double getMeetingFees();
+double getHotelFees();
+double getMealCostsTotal()
+double inputValidMoney(double amt)
+
+
 int regisFee();
 
 // calulations
 int privCarExpense(int miles); // Cost is $0.27 per mile
-double parkingFees(); // allows $6 per day, anything more must be covered by employee
-double taxiFees(); // allows $10 per day
+double parkingFees(int days, double parkingTotal); // allows $6 per day, anything more must be covered by employee
+double privCarExpense(int miles);
+double taxiFees(int days, double taxiTotal); // allows $10 per day
 double meetingFees();
 double hotelFees(); // allows up to $90 per night
 /* FIRST DAY:
@@ -51,7 +54,6 @@ double hotelFees(); // allows up to $90 per night
 */
 double hotelFees();
 double mealCost(int breakfasts, int lunches, int dinners, double expenditure);
-double inputValidMoney(double amt);
 int mealEaten(int days, int timeArrivedHome, int timeDeparted);
 
 
