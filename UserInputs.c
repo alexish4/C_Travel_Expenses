@@ -27,7 +27,7 @@ WARNING: DO NOT PUT ANYTHING OTHER THAN THE CORRESPONDING DATA TYPE.  SO IF IT A
 #include "header.h"
 
 //input for days taken on the trip.
-int daysOnTrip() {
+int getDaysOnTrip() {
     printf("How many days were spent on the trip?\n(Please include arrival and departure days)\n");
     scanf("%d", &days);
 
@@ -40,7 +40,7 @@ int daysOnTrip() {
 }
 
 //input for departure time.
-int timeDeparture() {
+int getTimeDeparture() {
     printf("What time was your departure?\n");
     printf("Please tell the time in 24-hour format (i.e 7 pm would be 19; 12 am is 0).\n");
     printf("Also, please tell time in hours only, rounding down (i.e 7:59 pm would be 19; 12:01 am would be 0).\n");    //guidelines for input.
@@ -55,7 +55,7 @@ int timeDeparture() {
 }
 
 //input for arrival time to home.
-int timeArriveHome() {
+int getTimeArriveHome() {
     printf("What time was your arrival at home?\n");
     printf("Please tell the time in 24-hour format (i.e 7 pm would be 19; 12 am is 0).\n");
     printf("Also, please tell time in hours only, rounding down (i.e 7:59 pm would be 19; 12:01 am would be 0).\n");    //guidelines for input.
@@ -70,14 +70,14 @@ int timeArriveHome() {
 }
 
 //input for air fare cost in dollars.
-double airFareCost() {
+double getAirFareCost() {
     printf("How much was spent on round trip airfare?\n");
     scanf("%lf", &airFare);
 
     return inputValidMoney(airFare);     //method to check validity of input.  Also returns the amount if it is correct.
 }
 
-double carRentalCost() {
+double getCarRentalCost() {
     printf("How much was spent on car rentals?\n");
     scanf("%lf", &carRental);
 
@@ -85,7 +85,7 @@ double carRentalCost() {
 }
 
 //input for miles driven.
-int milesDriven() {
+int getMilesDriven() {
     char yesOrNo;
     printf("did you use a private vehicle?  Enter 'y' for yes and 'n' for no.\n");      //asks the user if they drove a private vehicle.
     scanf("%c", &yesOrNo);
@@ -106,7 +106,7 @@ int milesDriven() {
 }
 
 //input for parking fees.
-double parkingFees() {
+double getParkingFees() {
     printf("How much was spent on parking fees?\n");
     scanf("%lf", &parkingF);
 
@@ -114,7 +114,7 @@ double parkingFees() {
 }
 
 //input for taxi fees.
-double taxiFees() {
+double getTaxiFees() {
     printf("How much was spent on taxi fees?\n");
     scanf("%lf", &taxiF);
 
@@ -122,7 +122,7 @@ double taxiFees() {
 }
 
 //input for conference and registration fees.
-double meetingFees() {
+double getMeetingFees() {
     printf("How much was spent on conferences or seminars?\n");
     scanf("%lf", &regisF);
 
@@ -130,7 +130,7 @@ double meetingFees() {
 }
 
 //input for hotel fees.
-double hotelFees() {
+double getHotelFees() {
     printf("How much was spent on hotel fees?\n");
     scanf("%lf", &hotelF);
 
@@ -138,7 +138,7 @@ double hotelFees() {
 }
 
 //input for meal costs.
-double mealCostsTotal() {
+double getMealCostsTotal() {
     printf("How much did you spend on meals?\n");
     scanf("%lf", &meals);
 
