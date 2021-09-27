@@ -59,7 +59,7 @@ int main()
     else
     {
         double owed = personTotal - allowedTotal;
-        printf("you over spent bud, you owe: $%.2lf");
+        printf("you over spent bud, you owe: $%.2lf", owed);
     }
     
     return 0;
