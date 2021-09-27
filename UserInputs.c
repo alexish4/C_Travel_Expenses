@@ -90,12 +90,11 @@ int getMilesDriven() {
     printf("did you use a private vehicle?  Enter 'y' for yes and 'n' for no.\n");      //asks the user if they drove a private vehicle.
     scanf("%c", &yesOrNo);
 
-    if (yesOrNo != 'y' || yesOrNo != 'n') {
-        while (yesOrNo != 'y' || yesOrNo != 'n') {                                      //checks if the user put something other than 'y' or 'n'.
-            printf("Invalid input.  Please put either 'y' for yes or 'n' for no\n");    //if it is not valid, then will ask to try again.
-            scanf("%c", &yesOrNo);
-        }
-    }else if (yesOrNo == 'y') {
+    while (yesOrNo != 'y' || yesOrNo != 'n') {                                      //checks if the user put something other than 'y' or 'n'.
+        printf("Invalid input.  Please put either 'y' for yes or 'n' for no\n");    //if it is not valid, then will ask to try again.
+        scanf("%c", &yesOrNo);
+    }
+    if (yesOrNo == 'y') {
         printf("How many miles did you drive?  Round to nearest mile.\n");    //if else statement to read if user answered 'y' or 'n'
         scanf("%d", &miles);
     } else {
