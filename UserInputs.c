@@ -31,8 +31,8 @@ int daysOnTrip() {
     printf("How many days were spent on the trip?\n(Please include arrival and departure days)\n");
     scanf("%d", &days);
 
-    while (days <= 1) {
-        printf("Invalid number of days. Please put at least 2 or more days.\n");      //checks validity of input.
+    while (days < 1) {
+        printf("Invalid number of days. Please put at least 1 or more days.\n");      //checks validity of input.
         scanf("%d", &days);
     }
 
@@ -137,9 +137,12 @@ double hotelFees() {
     return inputValidMoney(hotelF);
 }
 
-//INCOMPLETE: input for meal costs.
-double mealCosts() {
-    printf("How much did you spend on ")
+//input for meal costs.
+double mealCostsTotal() {
+    printf("How much did you spend on meals?\n");
+    scanf("%lf", &meals);
+
+    return inputValidMoney(meals);
 }
 
 //used to see if the inputed money value is valid.  If invalid, will ask the person to try again.
