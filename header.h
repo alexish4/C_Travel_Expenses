@@ -2,7 +2,7 @@
 #define HEADER_H
 
 //variables
-double airFare, carRental, parkingF, taxiF, regisF, parkingTotal, hotelF, taxiTotal;
+double airFare, carRental, parkingF, taxiF, regisF, parkingTotal, hotelF, taxiTotal, totalMealCost;
 int days, 
     timeDeparted, //24 hr time?
     timeArrivedHome,
