@@ -9,9 +9,6 @@ int days,
     miles, //if private car used
     carExpense,
     meals;
-int breakfast = 9;
-int lunch = 12;
-int dinner = 16;
 
 //Geting information from user
 /*NOTE ON INPUT VALIDATION:
@@ -36,7 +33,7 @@ int regisFee();
 
 // car calulations
 int privCarExpense(int miles); // Cost is $0.27 per mile
-double parkingFees(int days, double parkingTotal); // allows $6 per day, anything more must be covered by employee
+//double parkingFees(int days, double parkingTotal); // allows $6 per day, anything more must be covered by employee
 double privCarExpense(int miles);
 double taxiFees(int days, double taxiTotal); // allows $10 per day
 //hotel and meal calculations
