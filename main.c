@@ -49,8 +49,8 @@ int main()
     }*/
     //double amountSaved = 
     //printf("The total expenses covered for this trip: $%lf\n", total);
-    printf("The total amount spent: $%lf\n", personTotal);
-    printf("The total amount the company is willing to cover: $%lf\n", allowedTotal);
+    printf("The total amount spent: $%.2lf\n", personTotal);
+    printf("The total amount the company is willing to cover: $%.2lf\n", allowedTotal);
     if(personTotal < allowedTotal)
     {
         double saved = allowedTotal - personTotal;
