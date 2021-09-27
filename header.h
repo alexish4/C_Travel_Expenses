@@ -56,8 +56,10 @@ double mealCost(int breakfasts, int lunches, int dinners, double expenditure);
    Lunch is allowed if the time of arrival is after 13:00 
    Dinner is allowed on the last day if the time of arrival is after 19:00
 */
+double hotelAllowance(int days);
 double hotelFees();
-double mealCost(int breakfasts, int lunches, int dinners, double expenditure);
+double mealAllowance(int breakfasts, int lunches, int dinners);
+double mealCost(double allowance, double expenditure);
 
 double inputValidMoney(double amt);
 int breakfastsEaten(int days, int timeArrivedHome, int timeDeparted);
