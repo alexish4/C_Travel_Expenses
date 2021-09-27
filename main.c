@@ -54,11 +54,12 @@ int main()
     if(personTotal < allowedTotal)
     {
        double saved = allowedTotal - personTotal;
-       printf("Amount saved: %.2lf \n", saved);  
+       printf("Amount saved: $%.2lf \n", saved);  
     }
     else
     {
-        printf("you over spent bud");
+        double owed = personTotal - allowedTotal;
+        printf("you over spent bud, you owe: $%.2lf");
     }
     
     return 0;
