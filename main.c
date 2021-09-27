@@ -30,6 +30,7 @@ int main()
     personTotal = parkingTotal + 
                   taxiTotal + 
                   carRental + 
+                  privCarExpense(miles) + 
                   // hotel/meeting fees
                   airFare +
                   regisF +
@@ -37,15 +38,20 @@ int main()
                   meals;
 
     double mealAmount = mealCost(breakfast, lunch, dinner, meals);
+    allowedTotal = parkingFees(days, parkingTotal) + 
+                   taxiFees(days, taxiTotal) +
+                   //hotel/meals
+                   hotelAllowance(days) +
+                   mealAllowance(breakfast, lunch, dinner);
     /*
     if(mealAmount > 0)
     {
         total += mealAmount;
     }*/
-
+    //double amountSaved = 
     //printf("The total expenses covered for this trip: $%lf\n", total);
     printf("The total amount spent: $%lf\n", personTotal);
-    printf("The total amount to be reimbursed: \n");
+    printf("The total amount to be reimbursed: $%lf\n", allowedTotal);
     printf("Amount saved: \n");
     
     return 0;
