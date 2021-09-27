@@ -52,7 +52,8 @@ double hotelFees(); // allows up to $90 per night
 double hotelFees();
 double mealCost(int breakfasts, int lunches, int dinners, double expenditure);
 double inputValidMoney(double amt);
-int mealEaten(int days, int timeArrivedHome, int timeDeparted);
-
+int breakfastsEaten(int days, int timeArrivedHome, int timeDeparted);
+int lunchesEaten(int days, int timeArrivedHome, int timeDeparted);
+int dinnersEaten(int days, int timeArrivedHome, int timeDeparted);
 
 #endif
