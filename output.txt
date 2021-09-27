@@ -1,0 +1,80 @@
+Travel Expenses Calculator
+How many days were spent on the trip?
+(Please include arrival and departure days)
+7
+What time was your departure?
+Please tell the time in 24-hour format (i.e 7 pm would be 19; 12 am is 0).
+Also, please tell time in hours only, rounding down (i.e 7:59 pm would be 19; 12:01 am would be 0).
+7
+What time was your arrival at home?
+Please tell the time in 24-hour format (i.e 7 pm would be 19; 12 am is 0).
+Also, please tell time in hours only, rounding down (i.e 7:59 pm would be 19; 12:01 am would be 0).
+19
+Did you use a private vehicle?  Enter 'y' for yes and 'n' for no.
+y
+How many miles did you drive?  Round to nearest mile.
+26
+How much was spent on taxi fees?
+-260
+Invalid amount of money.  Amount must be non-negative.  Try again.
+-3626
+Invalid amount of money.  Amount must be non-negative.  Try again.
+200
+How much was spent on parking fees?
+230
+How much was spent on car rentals?
+2130
+How much was spent on round trip airfare?
+200
+How much was spent on conferences or seminars?
+30
+How much was spent on hotel fees?
+50
+How much did you spend on meals?
+10
+breakfast: 6
+lunch: 7
+dinner: 5
+The total amount spent: $2857.00
+The total amount the company is willing to cover: $960.00
+you over spent bud, you owe: $1897.00
+PS C:\Users\alexa\OneDrive\Desktop\project2TEST> gcc main.c UserInputs.c hotelAndMeal.c VehicleCalculations.c
+PS C:\Users\alexa\OneDrive\Desktop\project2TEST> ./a.exe
+Travel Expenses Calculator
+How many days were spent on the trip?      
+(Please include arrival and departure days)
+7
+What time was your departure?
+Please tell the time in 24-hour format (i.e 7 pm would be 19; 12 am is 0).
+Also, please tell time in hours only, rounding down (i.e 7:59 pm would be 19; 12:01 am would be 0).
+
+19
+What time was your arrival at home?
+Please tell the time in 24-hour format (i.e 7 pm would be 19; 12 am is 0).
+Also, please tell time in hours only, rounding down (i.e 7:59 pm would be 19; 12:01 am would be 0).
+7
+Did you use a private vehicle?  Enter 'y' for yes and 'n' for no.
+y
+How many miles did you drive?  Round to nearest mile.
+20
+How much was spent on taxi fees?
+-2365
+Invalid amount of money.  Amount must be non-negative.  Try again.
+-2230
+Invalid amount of money.  Amount must be non-negative.  Try again.
+230
+How much was spent on parking fees?
+20
+How much was spent on car rentals?
+300
+How much was spent on round trip airfare?
+560
+How much was spent on conferences or seminars?
+30
+How much was spent on hotel fees?
+123
+How much did you spend on meals?
+200
+The total amount spent: $1468.00
+The total amount the company is willing to cover: $905.00
+you over spent bud, you owe: $563.00
